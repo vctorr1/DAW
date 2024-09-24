@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    height: 45px;
+}
+
+header nav ul{
+    display: flex;
+    /* Situa los elementos en la posición equivalente al 80% de la pantalla desde la izquierda*/
+    margin-left: 70%;
+    list-style: none;
+}
+
+header nav ul li{
+    padding-left: 10%;
+}
+
+header a{
+    text-decoration: none;
+    color: brown;
+}
+
+section{
+    /*vh es equivalente al procentaje que se muestra en pantalla*/
+    height: 100vh;
+    border: 1px solid grey;
+    display: flex;
+    /*justify-content mueve en el eje x y align-items sobre el eje y*/
+    justify-content: center;
+    align-items: center;
+}
+
+/*Usamos el . antes de las propiedades*/
+.container img{
+    height: 300px;
+    border-radius: 20%;
+}
+
+.container h2{
+    margin-top: 2%;
+    font-size: 3em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container p, ul{
+    margin-top: 2%;
+    font-size: 1.5rem;
+}
+
+footer{
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+/*Fondo y colores*/
+#intro{
+    background-color: pink;
+}
+
+#about{
+    background-color: orange;
+}
+
+#contact{
+    background-color: aqua ;
+}

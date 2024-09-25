@@ -6,9 +6,18 @@ sí mismo y 1) o no, pe. miFuncion(7) devolverá true
 
 {
     function isPrime(num1){
-        let prime = num1 != 1;
-        Math.sqrt
+        //If conditional returns false if number is minor or equal to 1, as prime numbers are bigger than 1
+        if(num1 <= 1) return false;
+        //Then loops until it reaches the number square root, returning false if it finds any divisors or true if it doesnt find any.
+        //I had to search 
+        for(let i = 2; i <= Math.sqrt(num1); i++){
+            if(num1 % i === 0) return false;
+        }
+        return true;
 
     }
+
+    //Trying outnthe function
+    console.log(isPrime(18));
 
 }

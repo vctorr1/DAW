@@ -26,7 +26,8 @@
 
         let nifLetter = nif.slice(-1);
 
-        //WE calculate the correct possition of the letter index and use it to guess the correct one
+        /*WE calculate the correct possition of the letter index and use it to guess the correct one, the way of doing that being dividing the final number by 23 
+        and searching for the position of that number on the letters list. */
         let nifLetterIndex = parseInt(nifNum) % 23;
         let nifLetterVerified = lettersArray[nifLetterIndex];
 

@@ -1,4 +1,4 @@
-/**17. Función para contar caracteres de una cadena */
+/**17. Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFunción("Hola Mundo") devolverá 10. */
 
 "use strict"
 {
@@ -11,7 +11,7 @@
         return textLength;
         
     }
-
+    //Testing out the function
     console.log("The length without spaces of the string introduced is: " + countCharacters("hola mundo"));
 
 }

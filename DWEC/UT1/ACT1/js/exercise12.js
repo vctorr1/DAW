@@ -1,4 +1,5 @@
-/*12. Función para convertir entre Celsius y Fahrenheit*/
+/*12. Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe.
+miFuncion(0,"C") devolverá 32°F */
 
 "use strict"
 {

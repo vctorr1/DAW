@@ -53,8 +53,10 @@ Write a function that validates whether a password meets the following criteria:
         }
         //if the password matches with the expression, return true
         if(password.match(regex)){
+            console.log("Good password.");
             return true;
         }//else we return false
+        console.log("Enter a capital letter and a special character.");
         return false;
         
     }
@@ -96,7 +98,7 @@ Write a function that verifies whether a given string matches the date format
         //const regex = /^[01-30]{2}\/[01-12]{2}\/[0-9]{4}/;
         const regex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/;
 
-        //if the regular expression matches with the input returns the message
+        //if the regular expression matches with the input returns the good message
         if (dateText.match(regex)){
             return "The date format is correct.";
 
@@ -107,5 +109,8 @@ Write a function that verifies whether a given string matches the date format
 
     console.log(verifyDate("23/02/2000"));
     console.log(verifyDate("23/32/2000"));
+
+    //NOTE: this website was of a lot of help when trying to visualize and create the regular expressions
+    //https://regexr.com/
 
 }

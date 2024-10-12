@@ -19,8 +19,33 @@ k. Buscar un valor introducido por el usuario e indicar si existe o no. */
     console.log(numArray.length);
 
     //b. Cuántos son pares y cuántos impares y cuáles son.
-    numArray
-    
+    function evenOrOdd(numArray){
+        let evenNum = [];
+        let oddNum = [];
+
+        //loop through the array pushing the current number to even or odd array when necesary
+        numArray.forEach(num => {
+            if (num % 2 === 0) {
+                evenNum.push(num);
+            }else{
+                oddNum.push(num);
+            }
+        });
+
+        //return "there are " + evenNums.length + " even numbers, "
+        //returns an object literal for ease of displaying the results
+        return {
+            evenTotal: evenNum.length,
+            oddTotal: oddNum.length,
+            evenNums: evenNum,
+            oddNums: oddNum
+        }
+    }
+    //results displayed by using literal object and array methods
+    console.log("there are " + evenOrOdd(numArray).evenTotal + " even numbers.");
+    console.log("there are " + evenOrOdd(numArray).oddTotal + " odd numbers.");
+    console.log("the even numbers are " + evenOrOdd(numArray).evenNums.join() + ".");
+    console.log("the odd numbers are " + evenOrOdd(numArray).oddNums.join() + ".");
 
     //c. La suma de todos los números negativos.
     /*function printNegSum(numArray){
@@ -60,6 +85,56 @@ k. Buscar un valor introducido por el usuario e indicar si existe o no. */
         console.log(prod);
     });
 
+    //e. Cuántos son primos y cuáles son.
+    //as of exercise "b", i'll use object literals for displaying the result too, copying from it a bit
+    function isPrime(numArray){
+        //prime nums array
+        let primeNums = [];
+      
+        //internal function inside the orevius b function for determining if the numbers are prime or not
+        function isPrimeInternal(num) {
+          if (num <= 1) return false;
+          for (let i = 2; i <= Math.sqrt(num); i++) {
+            //returns false if is  not  a prime number
+            if (num % i === 0) return false;
+          }
+          //
+          return true;
+        }
+
+        //loops through the array adding each prime number to the array
+        numArray.forEach(num => {
+            if (isPrimeInternal(num)) {
+                primeNums.push(num);
+            }
+        });
+      
+        //returns an object literal with all the data
+        return {
+          primeTotal: primeNums.length,
+          primeNumbers: primeNums
+        };
+    }
+    //Results displayed through object literals
+    console.log("there are " + isPrime(numArray).primeTotal + " prime numbers.");
+    console.log("the prime numbers are " + isPrime(numArray).primeNumbers.join() + ".");
+
+    //f. Los números que ocupan las posiciones pares del vector.
+    function getArrayEvenIndex(numArray) {
+        let arrayEvenIndexes = [];
+
+        numArray.forEach(num => {
+            //if the index is even then it is pushed to the evenIndexs array
+            if (num % 2 === 0) {
+                arrayEvenIndexes.push(num);
+            }
+        });
+        return arrayEvenIndexes;
+    }
+    console.log("the numbers in the even index positions of the array are: " + getArrayEvenIndex(numArray));
+
+
+
     //g. El número mayor.                           //apply must be used or else it will return NaN
     console.log("el mayor número del array es " + Math.max.apply(Math, numArray));
 
@@ -85,18 +160,32 @@ k. Buscar un valor introducido por el usuario e indicar si existe o no. */
     console.log(sortedArray);
     console.log(sortedArray.reverse());
 
-    //k. Buscar un valor introducido por el usuario e indicar si existe o no.
-    function findValue(numArray, value) {
+    //k. Buscar un valor introducido por el usuario e indicar si existe o no. ARREGLAR
+    /*function findValue(numArray, value) {
         let foundValue = numArray.find(value);
         console.log(foundValue);
 
-        if ((foundValue = find(numArray, value)) !== false || isNaN(foundValue)) {
+        //if the value is found inside the array and is a number then 
+        if ((foundValue = find(numArray, value)) !== false || isNaN(foundValue) !==false) {
             console.log("the value was found");
             return true;
         }else{
             console.log("the value was not found");
             return false;
         }
+    }*/
+
+    function findValue(numArray, value) {
+    //includes instead of find because it returns true if found even just one time
+    let foundValue = numArray.includes(value);
+
+    if (foundValue) {
+        console.log("The value was found.");
+        return true;
+    } else {
+        console.log("The value aws not found.");
+        return false;
+    }
     }
 
     console.log(findValue(numArray, 2));

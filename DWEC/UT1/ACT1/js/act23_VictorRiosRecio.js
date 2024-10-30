@@ -5,7 +5,7 @@ igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true. */
 
 {
     function isPalindrome(text) {
-        //We convert the input to lowercase and remove non-alphanumeric characters
+        //We convert the input to lowercase and remove non alphanumeric characters
         const cleanText = text.toLowerCase().replace(/[^a-z0-9]/g, '');
         
         //Convert the cleaned string to an array, reverse it, and join it back to a string

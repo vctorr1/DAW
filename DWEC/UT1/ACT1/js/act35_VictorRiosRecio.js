@@ -6,7 +6,7 @@ elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25] */
 {
     let numArray = [1,2,3,4,5,6,7,8,9,10];
 
-    //function to map an array 
+    
     function arrayMapSquared(numArray) {
         //map is used to create a new array with the suqared numbers
         let squaredArray = numArray.map((number)=> number*number);
@@ -14,7 +14,6 @@ elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25] */
         
     }
 
-    //testing the function showing the unaltered array first
     console.log(numArray);
     console.log(arrayMapSquared(numArray));
 

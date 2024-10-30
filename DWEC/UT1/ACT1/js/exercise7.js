@@ -5,7 +5,7 @@
 {
     function showDivs() {
         //single prompt for the number that we need
-        let num1 = parseInt(prompt("Enter the number that you want to see the divisors for"));
+        let num1 = parseInt(prompt("Enter the number that you want to see the divisors for", "0"));
         console.log(`The divisor numbers of ${num1} are: `);
 
         //for loop that goes from 1 to the given number, and if it's a divisor of the given number, gets printed on console

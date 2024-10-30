@@ -5,7 +5,6 @@ un sentido que en otro), pe. miFuncion(2002) devolverá true. */
 
 {
     function isNumberPalindrome(num) {
-        //We convert the number to a string
         const numString = num.toString();
         
         //Convert the number string to an array, reverse it, and join it back to a string

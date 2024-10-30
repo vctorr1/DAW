@@ -9,7 +9,7 @@ array, p.e. miFuncion([1,5,34,99,-2]) devolverá [99,-60] */
         let minNum = Math.max(...numArray);
 
         const resultArray = []; 
-        //then the results to the results array
+        //then push the results to the results array
         resultArray.push(minNum, maxNum);
         return resultArray;
     }

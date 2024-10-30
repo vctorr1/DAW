@@ -13,8 +13,7 @@
         console.log("The indicated numbers and their intermediated ones are: ");
         while (num1<=num2){
             
-            //bit test (I had to search the internet for good ways to solve this, as i was stuck.)
-            //This tests if the first bit is on which signifies an odd number.
+            //bit test using the bitwise operator, returns true if the first bit is 1, which represents an odd number
             if (num1 & 1) {
                 console.log(num1 + ", ");
             }

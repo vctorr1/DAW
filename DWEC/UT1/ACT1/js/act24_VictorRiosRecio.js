@@ -15,6 +15,6 @@ miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá "1, 2, 3, 4 y 5.
     }
 
     //Testing out the function
-    console.log(removePattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz"));
+    console.log(removePattern("xyzasd1, xyasdz2, xyzdad3, xyz4dda y xyaz5ads", "xdasyz"));
 
 }

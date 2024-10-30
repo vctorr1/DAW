@@ -4,13 +4,13 @@
 
 {
     function showNum() {
-        //WE declare the necesary variables
+        //We declare the necesary variables
         let num1;
         let num2;
 
         //Simple prompts and while loop to print each number iteration until the second number given.
-        num1 = parseInt(prompt("Introduzca el primer número"));
-        num2 = parseInt(prompt("Introduzca el segundo número"));
+        num1 = parseInt(prompt("Introduce the first number"));
+        num2 = parseInt(prompt("Introduce the second number"));
         console.log("The indicated numbers and their intermediated ones are: ");
         while (num1<=num2){
             console.log(num1 + ", ");

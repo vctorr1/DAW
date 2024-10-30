@@ -8,7 +8,7 @@ ceros, que los vuelva a pedir.*/
     function compareNumbers() {
         let num1, num2;
     
-        //We use the isNanN() method to make sure that the loop goes on until the prompt values are numbers and also until the numbers are bigger than 0
+        //We use the isNanN() function to make sure that the loop goes on until the prompt values are numbers and also until the numbers are bigger than 0
         while (isNaN(num1) || isNaN(num2) || num1 <= 0 || num2 <= 0) {
             //The prompt text is converted to integers
             num1 = parseInt(prompt("Enter the first number:"));
@@ -30,7 +30,7 @@ ceros, que los vuelva a pedir.*/
         }
     }
     
-    //Testing of the function
+    //Testing out the function
     compareNumbers();
 
 

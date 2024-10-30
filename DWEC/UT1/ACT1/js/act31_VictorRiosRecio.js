@@ -4,7 +4,7 @@ el día de hoy, pe. miFuncion(new Date(1984,4,23)) o miFuncion (“01/12/2010”
 {
 
     //I mistakenly made the last exercise this way, so i'm juts gonna copy/paste it here
-    function calculateAge(birthdate) {
+    function calculateYear(birthdate) {
         //turning the date string into an array
         const birthdateArray = birthdate.split("/").map(Number);
 
@@ -28,6 +28,6 @@ el día de hoy, pe. miFuncion(new Date(1984,4,23)) o miFuncion (“01/12/2010”
         
     }
 
-    console.log("I am " + calculateAge('23/02/2000') + " years old.");
+    console.log(`${calculateYear('23/02/2000')} have passed.`);
 
 }

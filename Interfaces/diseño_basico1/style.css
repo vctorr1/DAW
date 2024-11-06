@@ -7,7 +7,6 @@ body {
 
 header {
     background-color: #F3E8C1;
-    color: white;
     padding: 20px;
     text-align: center;
 }
@@ -22,45 +21,24 @@ nav {
     background-color: #f5f0ec;
 }
 
-.button {
+.boton {
     display: inline-block;
     padding: 8px 15px;
     margin-right: 10px;
     border-radius: 5px;
-    color: white;
+    color: rgb(0, 0, 0);
+    background-color: #F3E8C1;
     text-decoration: none;
 }
 
-.primary {
-    background-color: #464f77;
-}
-
-.primary:hover {
-    background-color: #535d8c;
-}
-
-.secundary {
-    background-color: #9a989c;
-}
-
-.secundary:hover {
-    background-color: #adabb0;
-}
-
-.danger {
-    background-color: #8b2424;
-}
-
-.danger:hover {
-    background-color: #a02c2c;
-}
-
-.info {
-    background-color: #f4b840;
-}
-
-.info:hover {
+.boton:first-of-type{
     background-color: #f6c55d;
+    color: white;
+}
+
+.boton:last-of-type{
+    background-color: #8b2424;
+    color: white;
 }
 
 main {
@@ -70,43 +48,47 @@ main {
     padding: 20px;
 }
 
-article {
+.articulo {
     width: 45%;
     margin-bottom: 20px;
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+    border-radius: 3%;
+    /*para controlar el tamaño del atriculo*/
     overflow: hidden;
+    /*inlie block para que puedan estar al lado                                                                     */
     display: inline-block;
     vertical-align: top;
 }
 
-article:first-of-type {
+.articulo:first-of-type {
     margin-right: 5%;
 }
 
-article img {
+.articulo img {
     width: 100%;
     height: 200px;
+    /*encontré esto para que no se salga*/
     object-fit: cover;
 }
 
-.card-content {
+.contenido-articulo {
     padding: 20px;
     background-color: #BFD2B2;
 }
 
-.card-title {
+.titulo-articulo {
     color: white;
-    font-size: 1.5em;
+
     margin-bottom: 15px;
 }
 
-.card-text {
+.texto-articulo {
     color: white;
+    /*aumentamos la altura de las lineas*/
     line-height: 1.6;
 }
 
-.card-button {
+.boton-articulo {
     display: inline-block;
     padding: 8px 15px;
     margin-top: 15px;
@@ -115,7 +97,7 @@ article img {
     color: white;
     text-decoration: none;
 }
-
-.card-button:hover {
+/*hover para el botond el articulo*/
+.boton-articulo:hover {
     background-color: #f6c55d;
 }

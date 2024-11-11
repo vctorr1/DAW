@@ -15,7 +15,7 @@
             return false;
         }
   
-        //f it's a negative number then we call the function again changing it to a positive value
+        //if it's a negative number then we call the function again changing it to a positive value
         if (number < 0) {
             return isEven(-number);
         }

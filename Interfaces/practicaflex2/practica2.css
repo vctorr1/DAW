@@ -92,25 +92,55 @@
     margin: 0 auto;
 }
 
-.about-container{
+.about-container {
     display: flex;
-    flex-direction:row
+    flex-direction: row;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    width: 100%;
+    gap: 20px; /* Agrega espacio entre la imagen y el contenido */
 }
 
 .about-image {
-    display: flex;
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%; /* Limita el ancho máximo de la imagen */
 }
 
-.about-image img{
-    display: flex;
-    object-fit: cover;
+.about-image img {
+    width: 100%;
+    height: auto;
+    max-width: 400px; /* Ancho máximo para evitar que sea demasiado grande en pantallas grandes */
+    object-fit: contain; /* Asegura que la imagen mantenga su relación de aspecto */
 }
 
 .about-content {
     flex: 1;
-    
-    
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+/* Agrega un espacio entre cada párrafo */
+.about-content p {
+    margin-bottom: 1.2em;
+}
+
+/* Si tienes subtítulos o headers dentro del contenido */
+.about-content h2, .about-content h3 {
+    margin-top: 1.5em; /* Espacio superior antes del título */
+    margin-bottom: 0.5em; /* Espacio inferior después del título */
+    font-weight: bold;
+    color: #444; /* Puedes ajustar el color según el diseño */
+}
+
+/* Enlace de contacto o enlaces dentro de about-content */
+.about-content a {
+    color: #1a73e8; /* Cambia el color del enlace */
+    text-decoration: underline; /* Estilo del enlace */
+    margin-top: 1em; /* Espacio superior si es necesario */
+    display: inline-block; /* Permite margen superior e inferior */
 }
 
 /* Portafolio */
@@ -276,8 +306,13 @@ textarea {
         text-align: center;
     }
 
-    .about-container{
-        flex-direction: column;
+    .about-container {
+        flex-direction: column; /* Coloca la imagen y el contenido en una columna en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .about-image, .about-content {
+        max-width: 100%;
     }
 
     .pricing-cards {
